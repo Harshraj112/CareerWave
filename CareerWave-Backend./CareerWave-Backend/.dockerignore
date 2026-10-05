@@ -1,0 +1,6 @@
+node_modules
+.env
+data
+resume-parser/node_modules
+resume-parser/logs
+**/__pycache__

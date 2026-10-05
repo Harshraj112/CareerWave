@@ -1,0 +1,29 @@
+{
+  "name": "careerwave-backend",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Career Wave unified backend: API gateway + Resume Parser + career AI agent + job web-parsing + WhatsApp/Telegram alerts",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test tests/*.test.js resume-parser/tests/*.test.js",
+    "setup:python": "pip install -r requirements.txt",
+    "parser:standalone": "node resume-parser/src/index.js",
+    "parser:cli": "node resume-parser/src/cli.js",
+    "scrape": "python3 web-parsing/scrape_india_jobs.py",
+    "notifications:standalone": "cd web-parsing/notification-service && python3 -m uvicorn main:app --host 0.0.0.0 --port 8001"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "libphonenumber-js": "^1.11.12",
+    "mammoth": "^1.8.0",
+    "multer": "^2.0.2",
+    "pdf-parse": "^1.1.1"
+  }
+}

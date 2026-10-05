@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Lockfile is useful to keep in source control for reproducible installs
+# package-lock.json is intentionally not ignored
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs and local runtime output
+logs/
+*.log
+npm-debug.log*
+
+# Local build and cache folders
+dist/
+build/
+.cache/
+.temp/
+coverage/
+.nyc_output/
+
+# Local upload or generated files
+uploads/
+parsed-resumes/
+extracted_debug.txt
+
+# Local resume/document examples that should not be committed
+*.pdf
+*.docx
+
+# Editor / OS junk
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.bak

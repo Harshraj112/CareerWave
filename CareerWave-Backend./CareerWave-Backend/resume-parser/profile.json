@@ -1,0 +1,5 @@
+{
+"input_mode": "goal_roadmap",
+"target": { "stated_explicitly": true, "target_description": "SDE" },
+"resume_data": { "education": "B.Tech Computer Science", "skills": ["Python","React"] }
+}

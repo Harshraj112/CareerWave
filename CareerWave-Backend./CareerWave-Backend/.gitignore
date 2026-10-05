@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+resume-parser/node_modules/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+resume-parser/.env
+resume-parser/.env.*
+!resume-parser/.env.example
+
+# Runtime user data, uploads, and generated parser files
+data/
+uploads/
+parsed-resumes/
+resume-parser/logs/
+resume-parser/uploads/
+resume-parser/output/
+
+# Python environments, caches, and test artifacts
+.venv/
+venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Scraper-generated role catalogs and temporary output
+web-parsing/output/roles/
+web-parsing/output/*.tmp
+web-parsing/output/*.part
+
+# Logs and local process files
+logs/
+*.log
+*.pid
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test/build/coverage output
+coverage/
+.nyc_output/
+dist/
+build/
+.cache/
+.temp/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Local documents and debug artifacts
+*.pdf
+*.docx
+extracted_debug.txt
+*.backup
+*.bak

@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: careerwave-backend
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    disk:
+      name: careerwave-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: AI_PROVIDER
+        value: agentrouter
+      - key: AGENTROUTER_MODEL
+        value: claude-opus-4.8
+      - key: AGENTROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: AUTH0_DOMAIN
+        sync: false
+      - key: AUTH0_AUDIENCE
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_BOT_USERNAME
+        sync: false
+      - key: WHATSAPP_ACCESS_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        sync: false

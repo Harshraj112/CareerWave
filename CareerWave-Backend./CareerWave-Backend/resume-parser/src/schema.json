@@ -1,0 +1,575 @@
+{
+  "type": "OBJECT",
+  "properties": {
+    "input_mode": {
+      "type": "STRING",
+      "enum": [
+        "resume_analysis",
+        "goal_roadmap",
+        "insufficient_input"
+      ]
+    },
+    "target": {
+      "type": "OBJECT",
+      "properties": {
+        "stated_explicitly": {
+          "type": "BOOLEAN"
+        },
+        "target_description": {
+          "type": "STRING",
+          "nullable": true
+        },
+        "inference_basis": {
+          "type": "STRING",
+          "nullable": true
+        }
+      }
+    },
+    "resume_data": {
+      "type": "OBJECT",
+      "properties": {
+        "parsing_meta": {
+          "type": "OBJECT",
+          "properties": {
+            "is_resume": {
+              "type": "BOOLEAN"
+            },
+            "warnings": {
+              "type": "ARRAY",
+              "items": {
+                "type": "STRING"
+              }
+            }
+          }
+        },
+        "personal_info": {
+          "type": "OBJECT",
+          "properties": {
+            "full_name": {
+              "type": "STRING",
+              "nullable": true
+            },
+            "email": {
+              "type": "STRING",
+              "nullable": true
+            },
+            "phone": {
+              "type": "STRING",
+              "nullable": true
+            },
+            "location": {
+              "type": "STRING",
+              "nullable": true
+            },
+            "linkedin_url": {
+              "type": "STRING",
+              "nullable": true
+            },
+            "github_url": {
+              "type": "STRING",
+              "nullable": true
+            },
+            "portfolio_url": {
+              "type": "STRING",
+              "nullable": true
+            },
+            "other_links": {
+              "type": "ARRAY",
+              "items": {
+                "type": "STRING"
+              }
+            }
+          }
+        },
+        "summary": {
+          "type": "STRING",
+          "nullable": true
+        },
+        "total_experience_years": {
+          "type": "NUMBER",
+          "nullable": true
+        },
+        "work_experience": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "company": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "title": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "location": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "start_date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "end_date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "is_current": {
+                "type": "BOOLEAN"
+              },
+              "employment_type": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "description": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "STRING"
+                }
+              },
+              "skills_used": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "STRING"
+                }
+              }
+            }
+          }
+        },
+        "education": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "institution": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "degree": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "field_of_study": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "location": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "start_date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "end_date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "gpa": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "honors": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "STRING"
+                }
+              }
+            }
+          }
+        },
+        "skills": {
+          "type": "OBJECT",
+          "properties": {
+            "technical": {
+              "type": "ARRAY",
+              "items": {
+                "type": "STRING"
+              }
+            },
+            "tools": {
+              "type": "ARRAY",
+              "items": {
+                "type": "STRING"
+              }
+            },
+            "soft": {
+              "type": "ARRAY",
+              "items": {
+                "type": "STRING"
+              }
+            },
+            "languages_spoken": {
+              "type": "ARRAY",
+              "items": {
+                "type": "STRING"
+              }
+            }
+          }
+        },
+        "certifications": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "name": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "issuer": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "date_obtained": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "expiry_date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "credential_id": {
+                "type": "STRING",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "projects": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "name": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "description": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "tech_stack": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "STRING"
+                }
+              },
+              "url": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "date": {
+                "type": "STRING",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "publications": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "title": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "publisher": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "url": {
+                "type": "STRING",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "awards": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "title": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "issuer": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "description": {
+                "type": "STRING",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "volunteer_experience": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "organization": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "role": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "start_date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "end_date": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "description": {
+                "type": "STRING",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "ats_analysis": {
+          "type": "OBJECT",
+          "properties": {
+            "overall_score": {
+              "type": "NUMBER",
+              "description": "0-100 heuristic ATS estimate (rule B13)"
+            },
+            "subscores": {
+              "type": "ARRAY",
+              "items": {
+                "type": "OBJECT",
+                "properties": {
+                  "category": {
+                    "type": "STRING",
+                    "nullable": true,
+                    "description": "parseability_formatting | contact_completeness | section_completeness | keyword_relevance | quantified_impact | consistency | conciseness"
+                  },
+                  "score": {
+                    "type": "NUMBER"
+                  },
+                  "max": {
+                    "type": "NUMBER"
+                  },
+                  "reasoning": {
+                    "type": "STRING",
+                    "nullable": true
+                  }
+                }
+              }
+            },
+            "note": {
+              "type": "STRING",
+              "nullable": true
+            }
+          }
+        },
+        "gap_analysis": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "area": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "issue": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "severity": {
+                "type": "STRING",
+                "nullable": true,
+                "description": "high | medium | low"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "area": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "suggestion": {
+                "type": "STRING",
+                "nullable": true
+              }
+            }
+          }
+        },
+        "learning_recommendations": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "skill": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "courses": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "OBJECT",
+                  "properties": {
+                    "title": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "provider": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "url": {
+                      "type": "STRING",
+                      "nullable": true
+                    }
+                  }
+                }
+              },
+              "books": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "OBJECT",
+                  "properties": {
+                    "title": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "author": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "url": {
+                      "type": "STRING",
+                      "nullable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "nullable": true,
+      "description": "Populated only when input_mode = resume_analysis"
+    },
+    "roadmap": {
+      "type": "OBJECT",
+      "properties": {
+        "starting_point": {
+          "type": "STRING",
+          "nullable": true
+        },
+        "stages": {
+          "type": "ARRAY",
+          "items": {
+            "type": "OBJECT",
+            "properties": {
+              "stage_name": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "goal": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "estimated_time": {
+                "type": "STRING",
+                "nullable": true
+              },
+              "topics_to_learn": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "STRING"
+                }
+              },
+              "courses": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "OBJECT",
+                  "properties": {
+                    "title": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "provider": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "url": {
+                      "type": "STRING",
+                      "nullable": true
+                    }
+                  }
+                }
+              },
+              "books": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "OBJECT",
+                  "properties": {
+                    "title": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "author": {
+                      "type": "STRING",
+                      "nullable": true
+                    },
+                    "url": {
+                      "type": "STRING",
+                      "nullable": true
+                    }
+                  }
+                }
+              },
+              "practical_tips": {
+                "type": "ARRAY",
+                "items": {
+                  "type": "STRING"
+                }
+              }
+            }
+          }
+        },
+        "general_tips": {
+          "type": "ARRAY",
+          "items": {
+            "type": "STRING"
+          }
+        }
+      },
+      "nullable": true,
+      "description": "Populated only when input_mode = goal_roadmap"
+    },
+    "warnings": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      }
+    },
+    "clarification_needed": {
+      "type": "ARRAY",
+      "items": {
+        "type": "STRING"
+      }
+    }
+  }
+}

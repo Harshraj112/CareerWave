@@ -1,0 +1,81 @@
+[
+  {
+    "search_term": "software engineer",
+    "location": "India",
+    "days": 30,
+    "total_jobs": 200,
+    "sources": {
+      "indeed": 100,
+      "linkedin": 100
+    },
+    "sample_jobs": [
+      {
+        "title": "Salesforce Engineering Manager (India)",
+        "company": "Flosum",
+        "location": "IN",
+        "salary": "Not specified",
+        "tags": "Consulting And Business Services",
+        "posted_date": "2026-09-26",
+        "source": "indeed",
+        "link": "https://in.indeed.com/viewjob?jk=81ce76b710d615eb",
+        "scraped_at": "2026-09-26T00:23:16Z",
+        "confidence_score": 75,
+        "credibility_score": 75
+      },
+      {
+        "title": "Senior Software Engineer",
+        "company": "Optum India",
+        "location": "Gurgaon, Haryana, India",
+        "salary": "Not specified",
+        "tags": "fulltime, mid-senior level, Engineering and Information Technology, IT Services and IT Consulting",
+        "posted_date": "Not specified",
+        "source": "linkedin",
+        "link": "https://www.linkedin.com/jobs/view/4472043246",
+        "scraped_at": "2026-09-26T00:23:16Z",
+        "confidence_score": 57,
+        "credibility_score": 57
+      },
+      {
+        "title": "Principal Software Engineer- NLP, Gen AI, ML",
+        "company": "Gartner",
+        "location": "HR, IN",
+        "salary": "Not specified",
+        "tags": "fulltime, Consulting And Business Services",
+        "posted_date": "2026-09-26",
+        "source": "indeed",
+        "link": "https://in.indeed.com/viewjob?jk=f4023578e3b08ac3",
+        "scraped_at": "2026-09-26T00:23:16Z",
+        "confidence_score": 89,
+        "credibility_score": 89
+      },
+      {
+        "title": "Cloud Native Full stack Java Developer",
+        "company": "SAP Fioneer",
+        "location": "Pune Division, Maharashtra, India",
+        "salary": "Not specified",
+        "tags": "fulltime, mid-senior level, Information Technology, Non-profit Organizations and Primary and Secondary Education",
+        "posted_date": "Not specified",
+        "source": "linkedin",
+        "link": "https://www.linkedin.com/jobs/view/4470092697",
+        "scraped_at": "2026-09-26T00:23:16Z",
+        "confidence_score": 81,
+        "credibility_score": 81
+      },
+      {
+        "title": "RPA Developer",
+        "company": "LanceTech Solutions Pvt Ltd",
+        "location": "HR, IN",
+        "salary": "Not specified",
+        "tags": "fulltime",
+        "posted_date": "2026-09-26",
+        "source": "indeed",
+        "link": "https://in.indeed.com/viewjob?jk=bdea5e5ec059d17e",
+        "scraped_at": "2026-09-26T00:23:16Z",
+        "confidence_score": 84,
+        "credibility_score": 84
+      }
+    ],
+    "confidence_score": 88,
+    "credibility_score": 88
+  }
+]

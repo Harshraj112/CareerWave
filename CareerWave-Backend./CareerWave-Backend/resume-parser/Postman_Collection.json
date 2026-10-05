@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "Hecknex Resume Parser API",
+    "description": "Collection for testing the Hecknex Resume Parser REST API",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Health & Info",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            },
+            "description": "Check if the API is running and healthy"
+          }
+        },
+        {
+          "name": "Get API Info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/info",
+              "host": ["{{base_url}}"],
+              "path": ["api", "info"]
+            },
+            "description": "Get API documentation and endpoints info"
+          }
+        },
+        {
+          "name": "Welcome",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": [""]
+            },
+            "description": "Welcome endpoint"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Parse Operations",
+      "item": [
+        {
+          "name": "Parse Single Resume",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "path/to/resume.pdf",
+                  "description": "Resume file (PDF, PNG, JPEG, WebP, GIF, or TXT)"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/parse",
+              "host": ["{{base_url}}"],
+              "path": ["api", "parse"]
+            },
+            "description": "Parse a single resume file. Returns structured resume data as JSON."
+          }
+        },
+        {
+          "name": "Batch Parse Multiple Resumes",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "files",
+                  "type": "file",
+                  "src": "path/to/resume1.pdf",
+                  "description": "First resume"
+                },
+                {
+                  "key": "files",
+                  "type": "file",
+                  "src": "path/to/resume2.pdf",
+                  "description": "Second resume"
+                },
+                {
+                  "key": "files",
+                  "type": "file",
+                  "src": "path/to/resume3.pdf",
+                  "description": "Additional resumes can be added"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/api/batch-parse",
+              "host": ["{{base_url}}"],
+              "path": ["api", "batch-parse"]
+            },
+            "description": "Parse multiple resume files at once. Returns individual results and error summary."
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "default",
+      "description": "Base URL for the API (change to your deployed URL in production)"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+# Dependencies
+**/node_modules/
+
+# Local configuration and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Runtime data, uploads, logs, and generated files
+**/data/
+**/uploads/
+**/parsed-resumes/
+**/logs/
+**/*.log
+**/*.pid
+**/web-parsing/output/roles/
+**/coverage/
+**/.nyc_output/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+**/dist/
+**/build/
+**/.cache/
+**/.temp/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Local documents and debug artifacts
+**/*.pdf
+**/*.docx
+**/extracted_debug.txt
+**/*.backup
+**/*.bak
